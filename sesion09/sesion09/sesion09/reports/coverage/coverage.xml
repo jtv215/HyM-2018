@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1529488950">
+  <project timestamp="1529488950">
+    <file name="C:\xampp\htdocs\sesion09\php\class/modelo_conexion.php">
+      <class name="conexion" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+      </class>
+      <line num="8" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
+      <line num="10" type="stmt" count="13"/>
+      <line num="11" type="stmt" count="13"/>
+      <line num="12" type="stmt" count="13"/>
+      <line num="13" type="stmt" count="13"/>
+      <line num="16" type="stmt" count="13"/>
+      <line num="19" type="stmt" count="13"/>
+      <metrics loc="24" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+    </file>
+    <file name="C:\xampp\htdocs\sesion09\php\class/modelo_eliminar_usuario.php">
+      <class name="modelo_eliminar_usuario" namespace="global" fullPackage="modelo.eliminar">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </class>
+      <line num="7" type="method" name="eliminar_usuario" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="9" type="stmt" count="3"/>
+      <line num="10" type="stmt" count="3"/>
+      <line num="12" type="stmt" count="3"/>
+      <metrics loc="17" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+    </file>
+    <file name="C:\xampp\htdocs\sesion09\php\class/modelo_get_usuarios.php">
+      <class name="modelo_get_usuarios" namespace="global" fullPackage="modelo.get">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </class>
+      <line num="7" type="method" name="usuarios" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="9" type="stmt" count="1"/>
+      <line num="10" type="stmt" count="1"/>
+      <line num="12" type="stmt" count="1"/>
+      <metrics loc="27" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+    </file>
+    <file name="C:\xampp\htdocs\sesion09\php\class/modelo_login.php">
+      <class name="modelo_login" namespace="global" fullPackage="modelo">
+        <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="17" coveredelements="17"/>
+      </class>
+      <line num="7" type="method" name="login" visibility="public" complexity="3" crap="3" count="4"/>
+      <line num="9" type="stmt" count="4"/>
+      <line num="10" type="stmt" count="4"/>
+      <line num="11" type="stmt" count="4"/>
+      <line num="13" type="stmt" count="2"/>
+      <line num="14" type="stmt" count="1"/>
+      <line num="16" type="stmt" count="1"/>
+      <line num="18" type="stmt" count="2"/>
+      <line num="21" type="method" name="obtenerId" visibility="public" complexity="2" crap="2" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="30" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <metrics loc="38" ncloc="38" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="17" coveredelements="17"/>
+    </file>
+    <file name="C:\xampp\htdocs\sesion09\php\class/modelo_obtenerDatosUsuario.php">
+      <class name="modelo_obtenerDatosUsuario" namespace="global" fullPackage="modelo">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </class>
+      <line num="7" type="method" name="usu" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="9" type="stmt" count="2"/>
+      <line num="10" type="stmt" count="2"/>
+      <line num="12" type="stmt" count="2"/>
+      <metrics loc="20" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+    </file>
+    <file name="C:\xampp\htdocs\sesion09\php\class/modelo_registro.php">
+      <class name="modelo_registro" namespace="global" fullPackage="modelo">
+        <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="14" coveredelements="14"/>
+      </class>
+      <line num="9" type="method" name="crear_usuario" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="11" type="stmt" count="4"/>
+      <line num="12" type="stmt" count="4"/>
+      <line num="14" type="stmt" count="4"/>
+      <line num="17" type="method" name="crear_usuario_admin" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="19" type="stmt" count="1"/>
+      <line num="20" type="stmt" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="23" type="method" name="comprobar_usuario" visibility="public" complexity="2" crap="2" count="4"/>
+      <line num="24" type="stmt" count="4"/>
+      <line num="25" type="stmt" count="4"/>
+      <line num="26" type="stmt" count="4"/>
+      <line num="28" type="stmt" count="3"/>
+      <line num="30" type="stmt" count="2"/>
+      <metrics loc="35" ncloc="33" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="14" coveredelements="14"/>
+    </file>
+    <file name="C:\xampp\htdocs\sesion09\php\class/modelo_usuario.php">
+      <class name="modelo_usuario" namespace="global" fullPackage="modelo">
+        <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </class>
+      <line num="8" type="method" name="modificar_usuario" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="10" type="stmt" count="1"/>
+      <line num="11" type="stmt" count="1"/>
+      <line num="12" type="stmt" count="1"/>
+      <line num="15" type="method" name="modificar_usuario_normal" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="17" type="stmt" count="1"/>
+      <line num="18" type="stmt" count="1"/>
+      <line num="19" type="stmt" count="1"/>
+      <metrics loc="26" ncloc="26" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+    </file>
+    <metrics files="7" loc="187" ncloc="171" classes="7" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="47" elements="58" coveredelements="58"/>
+  </project>
+</coverage>

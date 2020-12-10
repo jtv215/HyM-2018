@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="BUILD" default="build" basedir=".">	
+	<target name="create_data_base">
+       <pdosqlexec url="mysql:host=localhost;dbname=hmissesion09" userid="root" password="123456"> 
+			<transaction src="db/hmissesion09.sql"/> 			
+		</pdosqlexec> 
+		
+	</target>
+	
+	<target name="clean">
+		<delete dir="./reports"/>
+		<mkdir dir="./reports/coverage"/>
+		
+		<delete dir="./apidocs"/>
+		<mkdir dir="./apidocs"/>
+		
+		<delete file="./phing.zip" />
+	</target>
+	
+	<target name="test">			 
+		<exec dir="." command="phpunit --log-junit reports/unitreport.xml test/" />
+	</target>
+	
+	<target name="testCoverage">			 
+		<exec dir="." command="phpunit --coverage-html reports/coverage --whitelist php/class test/" />
+	</target>
+	
+	<target name="testCoverageClover">			 
+		<exec dir="." command="phpunit --coverage-clover reports/coverage/coverage.xml --whitelist php/class test/" />
+	</target>
+	
+	<target name="tarea_documentation">
+		<phpdoc2  title="API Documentation" destdir="./apidocs" template="responsive"> 
+			<fileset dir="./test"> 
+				<include name="*.php" /> 
+			</fileset> 
+		</phpdoc2> 
+	</target>
+	
+	<target name="tarea_zip">
+		<zip destfile="phing.zip">
+			<fileset dir=".">
+				<include name="**/**" />
+			</fileset>
+		</zip>
+	</target>
+	
+	<target name="build" depends="create_data_base, clean, test, testCoverage, testCoverageClover, tarea_documentation,tarea_zip"/>
+</project>

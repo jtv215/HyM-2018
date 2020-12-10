@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>LoginHmis2018Jumanji</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registroOk</td></tr>
+</thead>
+<tbody>
+<tr>
+	<td>open</td>
+	<td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Email<datalist><option>id=Email</option></datalist></td>
+	<td>hola@ual.es</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password<datalist><option>id=Password</option></datalist></td>
+	<td>ABab12!!</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option></datalist></td>
+	<td>ABab12!!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td>
+	<td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registroKoYaExiste</td></tr>
+</thead>
+<tbody>
+<tr>
+	<td>open</td>
+	<td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Email<datalist><option>id=Email</option></datalist></td>
+	<td>hola@ual.es</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password<datalist><option>id=Password</option></datalist></td>
+	<td>ABab12!"</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option></datalist></td>
+	<td>ABab12!"</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']<datalist><option>css=input.btn.btn-default</option><option>//button[@type='submit']</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.validation-summary-errors.text-danger &gt; ul &gt; li<datalist><option>css=div.validation-summary-errors.text-danger &gt; ul &gt; li</option></datalist></td>
+	<td></td>
+</tr>
+<tr><td>assertText</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td>Log in</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registroRandom</td></tr>
+</thead>
+<tbody>
+<tr>
+	<td>open</td>
+	<td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeExpression</td>
+	<td>javascript{"ual" + Math.floor(Math.random()*1500000) + "@ual.es";}<datalist><option>javascript{"ual" + Math.floor(Math.random()*1500000) + "@ual.es";}</option></datalist></td>
+	<td>emailrandom</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${emailrandom}<datalist><option>${emailrandom}</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Email<datalist><option>id=Email</option></datalist></td>
+	<td>${emailrandom}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password<datalist><option>id=Password</option></datalist></td>
+	<td>ABab12!!</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option></datalist></td>
+	<td>ABab12!!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']<datalist><option>css=input.btn.btn-default</option><option>//button[@type='submit']</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Hello ${emailrandom}!<datalist><option>link=Hello ${emailrandom}!</option><option>link=Hola ${emailrandom}!</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form[@id='logoutForm']/ul/li[2]/button<datalist><option>//button[@type='submit']</option><option>//form[@id='logoutForm']/ul/li[2]/button</option><option>//li[2]/button</option><option>css=button.btn.btn-link.navbar-btn.navbar-link</option></datalist></td>
+	<td></td>
+</tr>
+<tr><td>assertText</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td>Log in</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDeUsuario_noCoincideClave</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/Account/Register<datalist><option>https://logappf1hmis2018.azurewebsites.net/Account/Register</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>hola1232456</td>
+</tr>
+<tr><td>click</td><td>//form[@action='/Account/Register']<datalist><option>//form[@action='/Account/Register']</option><option>//form</option><option>css=form</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>hola123456</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDeUsuario_minuscula_y_numero</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>hola123</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>hola123</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//form/div/ul<datalist><option>//form/div/ul</option><option>css=div.text-danger.validation-summary-errors &gt; ul</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDeUsuario_mayuscula_y_numero</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HOLA1234</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>HOLA1234</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDelUsuario_minuscula</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>aaaaaa</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>aaaaaa</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDelUsuario_mayuscula</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>AAAAAA</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>AAAAAA</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDelUsuario_minucula_y_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>aaaaaa_</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>aaaaaa_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDelUsuario_mayuscula_y_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//form[@action='/Account/Register']<datalist><option>//form[@action='/Account/Register']</option><option>//form</option><option>css=form</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>AAAAAA_</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>AAAAAA_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDelUsuario_minuscula_numero_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>aaaaaa5_</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>aaaaaa5_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDelUsuario_mayucula_numero_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>AAAAAA5_</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>AAAAAA5_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDelUsuario_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>______</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>______</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroDelUsuario_caracter_y_numero</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>______5</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>______5</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login_contrasena_incorrecta</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>hola@ual.es</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>12234456</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login_correo_no_existe</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registroKoYaExiste</td></tr>
+</thead>
+<tbody>
+<tr>
+	<td>open</td>
+	<td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Email<datalist><option>id=Email</option></datalist></td>
+	<td>hola@ual.es</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password<datalist><option>id=Password</option></datalist></td>
+	<td>ABab12!"</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option></datalist></td>
+	<td>ABab12!"</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']<datalist><option>css=input.btn.btn-default</option><option>//button[@type='submit']</option></datalist></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.validation-summary-errors.text-danger &gt; ul &gt; li<datalist><option>css=div.validation-summary-errors.text-danger &gt; ul &gt; li</option></datalist></td>
+	<td></td>
+</tr>
+<tr><td>assertText</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td>Log in</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroContraseñaCorta</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>doubleClick</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>click</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>1234</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>1234</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroSoloNumeros</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>doubleClick</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>click</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>123456789</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>123456789</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegistroSoloLetras</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>doubleClick</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>click</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>CarmenFernandez</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>CarmenFernandez</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">login</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CambiarCorreo</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello fernandezcarmen1997@gmail.com!<datalist><option>link=Hello fernandezcarmen1997@gmail.com!</option><option>//a[contains(text(),'Hello fernandezcarmen1997@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Username<datalist><option>id=Username</option><option>name=Username</option><option>//input[@id='Username']</option><option>//div[2]/input</option><option>css=#Username</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//div[3]/input</option><option>css=#Email</option></datalist></td><td>cfm465@inlumine.ual.es</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">AñadirTelefonoMovil</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello fernandezcarmen1997@gmail.com!<datalist><option>link=Hello fernandezcarmen1997@gmail.com!</option><option>//a[contains(text(),'Hello fernandezcarmen1997@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=PhoneNumber<datalist><option>id=PhoneNumber</option><option>name=PhoneNumber</option><option>//input[@id='PhoneNumber']</option><option>//div[4]/input</option><option>css=#PhoneNumber</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=PhoneNumber<datalist><option>id=PhoneNumber</option><option>name=PhoneNumber</option><option>//input[@id='PhoneNumber']</option><option>//div[4]/input</option><option>css=#PhoneNumber</option></datalist></td><td>646396667</td>
+</tr>
+<tr><td>click</td><td>//div[2]/div<datalist><option>//div[2]/div</option><option>css=div.col-md-9 &gt; div.row</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CambiarContraseñaNoCoincideNueva</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello fernandezcarmen1997@gmail.com!<datalist><option>link=Hello fernandezcarmen1997@gmail.com!</option><option>//a[contains(text(),'Hello fernandezcarmen1997@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Carmen12345*</td>
+</tr>
+<tr><td>click</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>CarmenFernadez789</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>CarmenFernandez789</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CambiarContraseñaFaltaCaracterNoAlfanumerico</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello fernandezcarmen1997@gmail.com!<datalist><option>link=Hello fernandezcarmen1997@gmail.com!</option><option>//a[contains(text(),'Hello fernandezcarmen1997@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Carmen12345*</td>
+</tr>
+<tr><td>click</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>25F2018th</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>25F2018th</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CambiarContraseñaOk</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello fernandezcarmen1997@gmail.com!<datalist><option>link=Hello fernandezcarmen1997@gmail.com!</option><option>//a[contains(text(),'Hello fernandezcarmen1997@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Carmen12345*</td>
+</tr>
+<tr><td>click</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CambiarContraseñaFalloActualContraseña</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello fernandezcarmen1997@gmail.com!<datalist><option>link=Hello fernandezcarmen1997@gmail.com!</option><option>//a[contains(text(),'Hello fernandezcarmen1997@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Carmen12345*</td>
+</tr>
+<tr><td>click</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>CARMENFERNANDEZ</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>CARMENFERNANDEZ</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CambiarContraseñaSoloLetras</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>fernandezcarmen1997@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello fernandezcarmen1997@gmail.com!<datalist><option>link=Hello fernandezcarmen1997@gmail.com!</option><option>//a[contains(text(),'Hello fernandezcarmen1997@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>HolaMundo1!</td>
+</tr>
+<tr><td>click</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>CARMENfernandez</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>CARMENfernandez</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">editar_perfil_correo_incorrecto</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//div[3]/input</option><option>css=#Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//div[3]/input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.</td>
+</tr>
+<tr><td>click</td><td>//div[2]/div<datalist><option>//div[2]/div</option><option>css=div.col-md-9 &gt; div.row</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cambio_contrasena_incorrecto_minuscula_y_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>abcdefgh5_</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>abcdefgh_5</td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>aaaaa5_</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>aaaaa5_</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cambio_contrasena_incorrecto_longitud_corta</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>asd4</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>asd4</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cambio_contrasena_incorrecto_mayuscula_y_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>AAAAA5_</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>AAAAA5_</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">cambio_contrasena_incorrecta_minuscula</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>aaaaaa</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>aaaaaa</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">cambio_contrasena_incorrecta_mayuscula</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>AAAAAA</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>AAAAAA</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cambio_contrasena_incorrecto_solo_numero_y_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>55555_</td>
+</tr>
+<tr><td>click</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>55555_</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cambio_contrasena_incorrecto_solo_caracter</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>______</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>______</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cambio_contrasena_incorrecto_solo_numero</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://logappf1hmis2018.azurewebsites.net/<datalist><option>https://logappf1hmis2018.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Email<datalist><option>id=Email</option><option>name=Email</option><option>//input[@id='Email']</option><option>//input</option><option>css=#Email</option></datalist></td><td>jeffersonmax90@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=Password<datalist><option>id=Password</option><option>name=Password</option><option>//input[@id='Password']</option><option>//div[3]/input</option><option>css=#Password</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>click</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello jeffersonmax90@gmail.com!<datalist><option>link=Hello jeffersonmax90@gmail.com!</option><option>//a[contains(text(),'Hello jeffersonmax90@gmail.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Manage/Index')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Password<datalist><option>link=Password</option><option>//a[contains(text(),'Password')]</option><option>//a[contains(@href, '/Manage/ChangePassword')]</option><option>//div/div/div/ul/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=OldPassword<datalist><option>id=OldPassword</option><option>name=OldPassword</option><option>//input[@id='OldPassword']</option><option>//div[2]/input</option><option>css=#OldPassword</option></datalist></td><td>Hola123456_</td>
+</tr>
+<tr><td>type</td><td>id=NewPassword<datalist><option>id=NewPassword</option><option>name=NewPassword</option><option>//input[@id='NewPassword']</option><option>//div[3]/input</option><option>css=#NewPassword</option></datalist></td><td>555555</td>
+</tr>
+<tr><td>type</td><td>id=ConfirmPassword<datalist><option>id=ConfirmPassword</option><option>name=ConfirmPassword</option><option>//input[@id='ConfirmPassword']</option><option>//div[4]/input</option><option>css=#ConfirmPassword</option></datalist></td><td>555555</td>
+</tr>
+<tr><td>click</td><td>xpath=(//button[@type='submit'])[2]<datalist><option>xpath=(//button[@type='submit'])[2]</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

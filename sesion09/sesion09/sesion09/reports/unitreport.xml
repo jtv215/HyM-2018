@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="test/" tests="13" assertions="14" errors="0" failures="3" skipped="0" time="0.141314">
+    <testsuite name="Comprobar_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Comprobar_Usuario_Test.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.012912">
+      <testcase name="comprobar_usuario_no_existe" class="Comprobar_Usuario_Test" classname="Comprobar_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Comprobar_Usuario_Test.php" line="20" assertions="1" time="0.010365"/>
+      <testcase name="test_metodo_help" class="Comprobar_Usuario_Test" classname="Comprobar_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Comprobar_Usuario_Test.php" line="44" assertions="1" time="0.002547"/>
+    </testsuite>
+    <testsuite name="Crear_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Crear_Usuario_Test.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.025259">
+      <testcase name="test_crear_nuevo_usuario_no_admin" class="Crear_Usuario_Test" classname="Crear_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Crear_Usuario_Test.php" line="20" assertions="1" time="0.012982"/>
+      <testcase name="crear_nuevo_usuario_admin" class="Crear_Usuario_Test" classname="Crear_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Crear_Usuario_Test.php" line="40" assertions="1" time="0.012277"/>
+    </testsuite>
+    <testsuite name="Eliminar_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Eliminar_Usuario_Test.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.024390">
+      <testcase name="eliminar_usuario" class="Eliminar_Usuario_Test" classname="Eliminar_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Eliminar_Usuario_Test.php" line="21" assertions="2" time="0.024390"/>
+    </testsuite>
+    <testsuite name="Iniciar_Sesion_Test" file="C:\xampp\htdocs\sesion09\test\Test_Iniciar_Sesion_Test.php" tests="5" assertions="5" errors="0" failures="1" skipped="0" time="0.046798">
+      <testcase name="iniciar_sesion_correcto_admin" class="Iniciar_Sesion_Test" classname="Iniciar_Sesion_Test" file="C:\xampp\htdocs\sesion09\test\Test_Iniciar_Sesion_Test.php" line="18" assertions="1" time="0.008644">
+        <system-out>2</system-out>
+      </testcase>
+      <testcase name="iniciar_sesion_correcto_no_admin" class="Iniciar_Sesion_Test" classname="Iniciar_Sesion_Test" file="C:\xampp\htdocs\sesion09\test\Test_Iniciar_Sesion_Test.php" line="28" assertions="1" time="0.009035"/>
+      <testcase name="iniciar_sesion_contraseña_incorrecta" class="Iniciar_Sesion_Test" classname="Iniciar_Sesion_Test" file="C:\xampp\htdocs\sesion09\test\Test_Iniciar_Sesion_Test.php" line="37" assertions="1" time="0.007689"/>
+      <testcase name="iniciar_sesion_incorrecto" class="Iniciar_Sesion_Test" classname="Iniciar_Sesion_Test" file="C:\xampp\htdocs\sesion09\test\Test_Iniciar_Sesion_Test.php" line="46" assertions="1" time="0.005442"/>
+      <testcase name="obtener_id" class="Iniciar_Sesion_Test" classname="Iniciar_Sesion_Test" file="C:\xampp\htdocs\sesion09\test\Test_Iniciar_Sesion_Test.php" line="56" assertions="1" time="0.015988">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Iniciar_Sesion_Test::obtener_id
+Failed asserting that -1 matches expected 13.
+
+C:\xampp\htdocs\sesion09\test\Test_Iniciar_Sesion_Test.php:61
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Modificar_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Test_Modificar_Usuario_Test.php" tests="2" assertions="2" errors="0" failures="1" skipped="0" time="0.026302">
+      <testcase name="modificar_usuario" class="Modificar_Usuario_Test" classname="Modificar_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Test_Modificar_Usuario_Test.php" line="23" assertions="1" time="0.013241"/>
+      <testcase name="modificar_usuario_normal" class="Modificar_Usuario_Test" classname="Modificar_Usuario_Test" file="C:\xampp\htdocs\sesion09\test\Test_Modificar_Usuario_Test.php" line="40" assertions="1" time="0.013061">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Modificar_Usuario_Test::modificar_usuario_normal
+mysqli_result Object (...) does not match expected type "string".
+
+C:\xampp\htdocs\sesion09\test\Test_Modificar_Usuario_Test.php:48
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="Obtener_Usuarios_Test" file="C:\xampp\htdocs\sesion09\test\Test_Obtener_Usuarios_Test.php" tests="1" assertions="1" errors="0" failures="1" skipped="0" time="0.005653">
+      <testcase name="devolver_usuarios" class="Obtener_Usuarios_Test" classname="Obtener_Usuarios_Test" file="C:\xampp\htdocs\sesion09\test\Test_Obtener_Usuarios_Test.php" line="18" assertions="1" time="0.005653">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Obtener_Usuarios_Test::devolver_usuarios
+Failed asserting that 8 matches expected 6.
+
+C:\xampp\htdocs\sesion09\test\Test_Obtener_Usuarios_Test.php:22
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
